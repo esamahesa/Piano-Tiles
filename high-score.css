@@ -1,0 +1,115 @@
+.high-score-wrapper{
+    position: absolute;
+    width: 40vw;
+    height: 20vh;
+    top: 10%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-10%);
+    border-radius: 5px;
+    background-color: inherit;
+    color: black;
+    border: 1px solid white;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    /* Max and Min box size */
+    max-width: 350px;
+    max-height: 160px;
+
+    min-width: 260px;
+    min-height: 55px;
+}
+
+.high-score-wrapper span{
+    padding: 1rem;
+    background-color: rgba(255, 255, 255, .5);
+    border-radius: 2px;
+    box-shadow: 0 0 10px 5px rgba(0,0,0, .1) inset, 0 0 15px 10px rgba(0,0,0, .1) inset, 0 0 10px 5px rgba(0,0,0, .1) inset;
+    font-size: 1.5rem;
+    font-weight: 550;
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+@keyframes appear{
+    0%{transform: translateX(-50%) translateY(-10%) scale(0);}
+    100%{transform: translateX(-50%) translateY(-10%) scale(1);}
+}
+
+@keyframes disappear{
+    0%{transform: translateX(-50%) translateY(-10%) scale(1);}
+    100%{transform: translateX(-50%) translateY(-10%) scale(0);}
+}
+
+@keyframes floating {
+    0%, 100%{
+        transform: translateX(-50%) translateY(-10%);
+    }
+    5%{
+        transform: translateX(-52.5%) translateY(-11%);
+    }
+    10%{
+        transform: translateX(-55%) translateY(-12%);
+    }
+    15%{
+        transform: translateX(-57.5%) translateY(-13%);
+    }
+    20%{
+        transform: translateX(-60%) translateY(-14%);
+    }
+    25%{
+        transform: translateX(-57.5%) translateY(-15%);
+    }
+    30%{
+        transform: translateX(-55%) translateY(-16%);
+    }
+    35%{
+        transform: translateX(-52.5%) translateY(-17%);
+    }
+    40%{
+        transform: translateX(-50%) translateY(-18%);
+    }
+    45%{
+        transform: translateX(-47.5%) translateY(-17%);
+    }
+    50%{
+        transform: translateX(-45%) translateY(-16%);
+    }
+    55%{
+        transform: translateX(-47.5%) translateY(-15%);
+    }
+    60%{
+        transform: translateX(-50%) translateY(-14%);
+    }
+    65%{
+        transform: translateX(-52.5%) translateY(-13%);
+    }
+    70%{
+        transform: translateX(-55%) translateY(-12%);
+    }
+    75%{
+        transform: translateX(-52.5%) translateY(-11%);
+    }
+    80%{
+        transform: translateX(-50%) translateY(-10%);
+    }
+    85%{
+        transform: translateX(-47.5%) translateY(-11%);
+    }
+    90%{
+        transform: translateX(-45%) translateY(-12%);
+    }
+    95%{
+        transform: translateX(-47.5%) translateY(-13%);
+    }
+}
+
+.high-score-wrapper{
+    transition: 1s;
+    animation: 
+    appear .5s linear normal forwards, 
+    floating 3s linear .5s infinite normal forwards, 
+    disappear 1s linear 3.5s forwards;
+}

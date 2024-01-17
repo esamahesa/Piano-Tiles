@@ -1,0 +1,59 @@
+.instruction-section{
+    border: 1px solid white;
+    box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
+    border-radius: 5px;
+    width: 100%;
+    min-width: 65px;
+    max-width: 125px;
+    padding: 1vh;
+    box-sizing: border-box;
+    display: none;
+}
+
+.instruction-wrapper{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.firm{
+    font-weight: 600;
+    background-color: white;
+    padding: 1px;
+    color: black;
+}
+
+.instruction-wrapper div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.instruction-wrapper div{
+    color: white;
+}
+
+@keyframes rollOut{
+    0%{transform: scaleY(0);}
+    100%{transform: scaleY(1);}
+}
+
+.instruction-section{
+    animation: rollOut 2.5s ease-out;
+    transform-origin: top; /* Ini adalah cara kita mengubah titik transformasi element, karna secara default value transform origin adalah center  */
+    transform: 1s;
+}
+
+@keyframes rollIn{
+    0%{transform: scaleY(1);}
+    100%{transform: scaleY(0);}
+}
+
+.roll-in{
+    /* transform-origin: bottom; */
+    animation: rollIn 2.5s ease-in;
+    transform: 1s;
+}
